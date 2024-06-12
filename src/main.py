@@ -17,13 +17,13 @@ while run:
 
     key = pygame.key.get_pressed()
 
-    if key[pygame.K_a]:
+    if key[pygame.K_a] or key[pygame.K_LEFT]:
         player.move_ip(-1, 0)
-    elif key[pygame.K_d]:
+    elif key[pygame.K_d] or key[pygame.K_RIGHT]:
         player.move_ip(1, 0)
-    elif key[pygame.K_w]:
+    elif key[pygame.K_w] or key[pygame.K_UP]:
         player.move_ip(0, -1)
-    elif key[pygame.K_s]:
+    elif key[pygame.K_s] or key[pygame.K_DOWN]:
         player.move_ip(0, 1)
 
     for event in pygame.event.get():
